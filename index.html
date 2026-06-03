@@ -7,11 +7,14 @@
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 		/>
 
-		<title>reveal.js</title>
+		<title>GNU Taler</title>
 
 		<link rel="stylesheet" href="dist/reset.css" />
 		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+		<link rel="stylesheet" href="dist/theme/taler.css" />
+
+		<!-- GSAP -->
+  		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
@@ -19,8 +22,133 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-background-gradient="linear-gradient(to left, #0042b3, #222)" data-id="mainbg" data-transition="slide" data-background-transition="zoom">
+					<h3 style="color: white; width:80%; margin:0 auto;">Post-Quantumifying Privacy-Preserving Electronic Payments with</h3>
+					<img
+						src="assets/taler-logo.svg"
+						style="height: 300px; margin: 50px auto 4rem auto; background: transparent"/>
+				</section>
+				<section>
+					<section data-background-iframe="assets/section.html" data-transition="slide">
+						<h2 style="margin:0; color:white; font-weight: bold;">
+							Why Taler?
+						</h2>
+					</section>
+					<section data-background="assets/creditcard.jpg" data-transition="slide">
+					</section>
+					<section data-background="assets/creditcard-overlay.png" data-transition="fade">
+						<h2 class="fragment fade-down" style="margin:0; margin: 30pt; color:#222; font-weight: bold;">
+							Traceability
+						</h2>
+						<h2  class="fragment fade-down" style="margin:0; margin: 30pt; color:#222; font-weight: bold;">
+							Profiling
+						</h2>
+						<h2  class="fragment fade-down" style="margin:0; margin: 30pt; color:#222; font-weight: bold;">
+							Sensitive data exposure
+						</h2>
+					</section>
+					<section data-background="assets/creditcard-overlay.png" data-transition="slide" data-auto-animate>
+						<img data-id="bitcoin"						
+						src="assets/bitcoin.png"
+						style="height: 50%;background: transparent"/>
+					</section>
+					<section data-background="assets/creditcard-overlay.png" data-auto-animate>
+						<div class="r-stack">
+							<img src="assets/crypto.png"
+								style="width:100%; background: white; margin: 30pt"/>
+							<img data-id="bitcoin"						
+								src="assets/bitcoin.png"
+								style="height: 15pt; background: transparent; position: absolute; margin-top: 64pt; margin-left: 73pt"/>
+						</div>
+					</section>
+					<section data-background="black" data-transition="fade">
+						<h2  style="margin: 30pt; color:white; font-weight: bold;">
+							Is it so "easy"...?
+						</h2>
+					</section>
+					<section data-background-iframe="https://www.web3isgoinggreat.com/" data-background-interactive data-transition="fade"></section>
+					<section data-background="black" data-transition="fade">
+						<h2 style="margin:0; margin: 30pt; color:white; font-weight: bold;">
+							Frauds
+						</h2>
+						<h2  class="fragment fade-down" style="margin:0; margin: 30pt; color:white; font-weight: bold;">
+							Deregulation
+						</h2>
+						<h2 class="fragment fade-down" style="margin:0; margin: 30pt; color:white; font-weight: bold;">
+							Black-mailing
+						</h2>
+						<h2 class="fragment fade-down" style="margin:0; margin: 30pt; color:white; font-weight: bold;">
+							Money laundering
+						</h2>
+					</section>
+					<section data-background="black" data-transition="slide">
+						<h2  style="margin:0; margin: 30pt; color:white; font-weight: bold;">
+							We live in a real world
+						</h2>
+						<h2  class="fragment fade-down" style="margin:0; margin: 30pt; color:white; font-weight: bold;">
+							...and real world has rules 
+						</h2>
+					</section>
+				</section>
+				<section>
+					<section data-background-iframe="assets/section.html" data-transition="slide">
+						<div class="fragment fade-up">
+							<h2 style="margin-bottom:-10pt; color:#0042b3; font-weight: bold;">
+							Customer
+							</h2>
+							<img src="assets/incognito.svg" height="5%" style="margin-bottom: 40pt"/>
+						</div>
+						<h2 style="margin:0; color:white; font-weight: bold;">
+							Asymmetric privacy
+						</h2>
+						<div class="fragment fade-down">
+							<img src="assets/surveillance.svg" height="5%" style="margin-top: 40pt"/>
+							<h2 style="margin-top:-10pt; color:#0042b3; font-weight: bold;">
+							Merchant
+							</h2>
+						</div>
+					</section>
+					<section data-background-iframe="assets/goals.html" data-transition="slide">
+						<div class="r-stack" style="width: 100%; height: 100%;">
+							<div class="r-stack" style="width: 100%; height: 150px;">
+								<img src="assets/taler-deco.svg" style="margin-top:-170pt; margin-left:200pt; height: 80%; background: transparent;"/>
+								<h3 style="margin-top:-150pt; margin-left:270pt; color:#0042b3; font-weight: bold;"> 
+									Taler's goals 
+								</h3>
+							</div>
+							<div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 50px; margin-top: 9%;">
+								<div class="fragment fade-up" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+									<div style="background: white; width: 130px; height: 130px; border-radius: 30%; display: flex; align-items: center; justify-content: center;">
+									<img src="assets/incognito.svg" style="height: 70%;"/>
+									</div>
+									<h5 style="margin-top: 30pt;">Customer's <strong>anonymity</strong></h5>
+								</div>
+								<div class="fragment fade-up" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+									<div style="background: white; width: 130px; height: 130px; border-radius: 30%; display: flex; align-items: center; justify-content: center;">
+									<img src="assets/tax.svg" style="height: 70%;"/>
+									</div>
+									<h5 style="margin-top: 30pt;">Identified merchants (easily <strong>taxable</strong>)</h5>
+								</div>
+								<div class="fragment fade-up" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+									<div style="background: white; width: 130px; height: 130px; border-radius: 30%; display: flex; align-items: center; justify-content: center;">
+									<img src="assets/aml.svg" style="height: 70%;"/>
+									</div>
+									<h5 style="margin-top: 30pt;">Anti-money laundering</h5>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section data-background="assets/ecash.png" data-transition="fade">
+						<h2 style="margin:0; margin: 30pt; color:#0042b3; font-weight: bold;">
+							How does Taler “electronic cash” work?
+						</h2>
+					</section>
+					<section data-background="white" data-transition="fade">
+						<div id="diagram"></div>
+					</section>
+				</section>
 			</div>
 		</div>
 
@@ -29,15 +157,185 @@
 		<script src="dist/plugin/markdown.js"></script>
 		<script src="dist/plugin/highlight.js"></script>
 		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
 			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+			hash: true,
+			preloadIframes: true,
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
 			});
+
+			// Load SVG and init AFTER load
+			fetch('assets/diagram.svg')
+			.then(res => res.text())
+			.then(svg => {
+				document.getElementById('diagram').innerHTML = svg;
+				initAnimation();
+			});
+
+			const positionHistory = new Map();
+			let isAnimating = false;
+			let isAnon = false;
+
+			function initAnimation() {
+				Reveal.on('fragmentshown', e => handleStep(e, true));
+				Reveal.on('fragmenthidden', e => handleStep(e, false));
+
+				Reveal.on('slidechanged', () => {
+					positionHistory.clear();
+				});
+				}
+
+				async function handleStep(event, forward) {
+				if (isAnimating) return;
+				isAnimating = true;
+
+				try {
+					const step = event.fragment.dataset.step;
+
+					const coin = document.getElementById("coin");
+					const anonCoin = document.getElementById("anon-coin");
+
+					switch (step) {
+
+					case "wire-money1":
+						if (forward) {
+						await move(coin, "Reserve");
+						} else {
+						await restorePosition(coin);
+						}
+						break;
+
+					case "withdraw":
+						if (forward) {
+						showWallet();
+						await move(coin, "exchange");
+						await crossfade(coin, anonCoin, 1.5);
+						await move(anonCoin, "wallet-group");
+						} else {
+						await restorePosition(anonCoin);
+						await crossfade(anonCoin, coin, 1.5);
+						await restorePosition(coin);
+						hideWallet();
+						}
+						break;
+
+					case "pay":
+						if (forward) {
+						await move(anonCoin, "merchant");
+						} else {
+						await restorePosition(anonCoin);
+						}
+						break;
+
+					case "deposit":
+						if (forward) {
+						await move(anonCoin, "exchange");
+						} else {
+						await restorePosition(anonCoin);
+						}
+						break;
+
+					case "wire-money2":
+						if (forward) {
+						await crossfade(anonCoin, coin, 1.5);
+						await move(coin, "bankm");
+						} else {
+						await restorePosition(coin);
+						await crossfade(coin, anonCoin, 1.5);
+						}
+						break;
+					}
+
+				} finally {
+					isAnimating = false;
+				}
+			}
+
+			function getCenter(el) {
+				const b = el.getBBox();
+				return {
+					x: b.x + b.width / 2,
+					y: b.y + b.height / 2
+				};
+			}
+
+			function getTransform(el) {
+				return el._gsap?.transform || { x: 0, y: 0 };
+			}
+
+			function savePosition(el) {
+				if (!positionHistory.has(el)) {
+					positionHistory.set(el, []);
+				}
+
+				const stack = positionHistory.get(el);
+				const t = getTransform(el);
+
+				stack.push({ x: t.x, y: t.y });
+			}
+
+			function restorePosition(el) {
+				const stack = positionHistory.get(el);
+				if (!stack || stack.length === 0) return Promise.resolve();
+
+				const prev = stack.pop();
+
+				return new Promise(resolve => {
+					gsap.to(el, {
+					x: prev.x,
+					y: prev.y,
+					duration: 0.8,
+					ease: "power2.inOut",
+					onComplete: resolve
+					});
+				});
+			}
+
+
+			function move(el, targetId) {
+				return new Promise(resolve => {
+
+					savePosition(el);
+
+					const target = document.getElementById(targetId);
+
+					const c = getCenter(el);
+					const t = getCenter(target);
+
+					const dx = t.x - c.x;
+					const dy = t.y - c.y;
+
+					gsap.to(el, {
+					duration: 0.8,
+					x: dx,
+					y: dy,
+					ease: "power2.inOut",
+					onComplete: resolve
+					});
+
+				});
+			}
+			function crossfade(fromEl, toEl, duration = 1.5) {
+				return new Promise(resolve => {
+
+					gsap.timeline({
+					onComplete: () => {
+						isAnon = (toEl.id === "anon-coin");
+						resolve();
+					}
+					})
+					.to(fromEl, { opacity: 0, duration, ease: "power2.inOut" }, 0)
+					.to(toEl,   { opacity: 1, duration, ease: "power2.inOut" }, 0);
+
+				});
+			}
+
+			function showWallet() {
+				gsap.set("#wallet-overlay", { opacity: 1 });
+			}
+
+			function hideWallet() {
+				gsap.set("#wallet-overlay", { opacity: 0 });
+			}
 		</script>
 	</body>
 </html>
